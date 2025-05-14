@@ -1,0 +1,13 @@
+section.processo-section {
+  position: relative;
+  background-color: #F7F5F5;
+}
+
+section.processo-section::before {
+  content: "";
+  position: absolute;
+  height: 120px;
+  top: -120px;
+  background-image: linear-gradient(transparent, rgb(247, 245, 245));
+  width: 100%;
+}

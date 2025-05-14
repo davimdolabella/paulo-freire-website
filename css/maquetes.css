@@ -1,55 +1,3 @@
-/* Estilos específicos da página de maquetes */
-
-.hero-section {
-    min-height: 100vh;
-    background-image: url("../assets/images/aps-background-image.jpg");
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.hero-section .light-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    opacity: 0.6;
-}
-
-.hero-container {
-    position: relative;
-    z-index: 2;
-    padding: 2rem;
-}
-
-.hero-content {
-    border-radius: 10px;
-    font-size: 1.2rem;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 0 80px 100px rgba(255, 255, 255, 0.6);
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-    font-weight: 600;
-}
-
-.hero-content span {
-    color: rgb(185, 38, 38);
-}
-
-.hero-content p {
-    line-height: 1.8;
-}
-
 /* Seção de objetivos */
 .objetivo-section {
     padding: 7rem 0;
@@ -370,6 +318,11 @@
     .comparacao-card {
         margin-bottom: 2rem;
     }
+
+    .comparacao-row {
+      display: flex;
+      gap: 2rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -408,6 +361,7 @@
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: calc(2rem - 3px);
   }
   
   .showcase-title::after {
@@ -416,7 +370,7 @@
     width: 70%;
     height: 3px;
     background-color: rgb(193, 14, 14);
-    bottom: -10px;
+    bottom: -1rem;
     left: 15%;
   }
   
@@ -464,7 +418,7 @@
   /* Grade principal de imagens */
   .showcase-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 200px;
     gap: 15px;
     margin-bottom: 3rem;
@@ -773,7 +727,7 @@
   
   @media (max-width: 992px) {
     .showcase-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: 180px;
     }
     

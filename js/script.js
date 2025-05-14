@@ -1,29 +1,27 @@
 const nav = document.querySelector("nav");
-const menu = document.getElementById('menu');
-const processorSvg = document.getElementById("processor-svg");
-const chartSvg = document.getElementById("chart-svg");
-const codeSvg = document.getElementById("code-svg");
+const menu = document.getElementById("menu");
+const ecoSvg = document.getElementById("eco-svg");
+const eco2Svg = document.getElementById("eco2-svg");
+const recycleSvg = document.getElementById("recycle-svg");
 const heroContent = document.getElementsByClassName("hero-content-text");
+const mmCloseBtn = document.getElementById("close-mobile-menu-btn");
+const mmBtn = document.getElementById("menu-btn");
 
-window.onload = () => {
-    if (window.innerWidth > 1000) {
-        nav.classList.toggle("sticky", window.scrollY > 0);
-    }
+mmCloseBtn.onclick = () => {
+  document.getElementById("mobile-menu").classList.toggle("active", false);
 };
 
-window.addEventListener("scroll", function() {
-    if (window.innerWidth > 1000) {
+mmBtn.onclick = () => {
+  document.getElementById("mobile-menu").classList.toggle("active", true);
+};
 
-        let value = window.scrollY;
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
 
-        nav.classList.toggle("sticky", window.scrollY > 0);
-
-        processorSvg.style.top = `${window.innerHeight * 0.3 + value * 0.4}px`;
-        chartSvg.style.top = `${window.innerHeight * 0.5 + value * 0.5}px`;
-        codeSvg.style.top = `${window.innerHeight * 0.6 + value * 0.7}px`;
-        for (let i = 0; i < 2; i++) {
-          heroContent[i].style.top = `${value * 0.3}px`;
-        }
-    
-    }
+  ecoSvg.style.top = `${window.innerHeight * 0.2 + value * 0.4}px`;
+  eco2Svg.style.top = `${window.innerHeight * 0.4 + value * 0.5}px`;
+  recycleSvg.style.top = `${window.innerHeight * 0.5 + value * 0.7}px`;
+  for (let i = 0; i < 2; i++) {
+    heroContent[i].style.top = `${value * 0.3}px`;
+  }
 });
